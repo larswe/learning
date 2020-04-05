@@ -40,7 +40,7 @@ function task1_mgc_cv(X,Y,CovKind,epsilon,Kfolds)
         name = "t1_mgc_" + kstr + "cv" + pstr + "_Ms.mat";
         save(name , "Ms");
         kindstr = int2str(CovKind);
-        name = "t1_mgc_" + kstr + "cv" + pstr + "_ck" + kindstr + "_CM.mat";
+        name = "t1_mgc_" + kstr + "cv" + pstr + "_ck" + kindstr + "_Covs.mat";
         save(name, "Covs");
         
         % We will now try to classify each test point -> Compute P(x|c)
@@ -85,6 +85,6 @@ function task1_mgc_cv(X,Y,CovKind,epsilon,Kfolds)
      lstr = int2str(L);
      
     name = "t1_mgc_" + kstr + "cv" + lstr + "_ck" + kindstr + "_CM.mat";
-    save(name, "totalCM");
+    save(name, "CM");
 end
 
